@@ -1,0 +1,17 @@
+Package: AMInventory
+Title: Inventory Control and Optimization
+Version: 1.0.0
+Author: Athanasios Migdalas <athmig59@gmail.com>
+Maintainer: Athanasios Migdalas <athmig59@gmail.com>
+Description: Implements models, functions and algorithms for inventory control and optimization. It is a class companion to the book "Axsäter, S. (2015) Inventory Control, 3d Edition, Springer".
+License: GPL-3
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.0
+Imports: 
+    optimx,
+    Rsolnp,
+    stats,
+    ggplot2
+Remotes: 
+    http://R-Forge.R-project.org
