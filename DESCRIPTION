@@ -13,5 +13,3 @@ Imports:
     Rsolnp,
     stats,
     ggplot2
-Remotes: 
-    http://R-Forge.R-project.org

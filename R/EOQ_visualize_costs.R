@@ -44,6 +44,8 @@
 #'
 #' res <- EOQ_visualize_costs(A=100, d=300, h=20, Q=seq(20,100,by=5))
 #'
+#' @importFrom ggplot2 ggplot geom_line geom_label aes xlab ylab ggtitle labs geom_vline
+#'
 #'@export
 EOQ_visualize_costs <- function(A=10, d=1500, h=0.65, Q=seq(30,300,by=10)) {
 
