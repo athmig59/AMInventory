@@ -35,7 +35,7 @@
 #' @param{c}  {purcase price}
 #' @param{s}  {salvage price}
 #'
-#' @return A vector containing the following:
+#' @return A list containing the following:
 #' \itemize{
 #'   \item{S}  {the optimal order quantity}
 #'   \item{SS}  {the safety stock}
@@ -93,8 +93,8 @@ Newsvendor <- function(mu,sigma, Co=0, Cu=0, p=0,c=0,s=0){
     CV <- sigma/mu
     S2 <- 1 - CV * ( stats::dnorm(z) - ( 1 - stats::pnorm(z) ) * z )
     SS <- z * sigma
-    options(digits=3)
-    result <- c(S=S, SS=SS, z=z, S2=S2, CQ=CQ, CV=CV)
+    #options(digits=3)
+    result <- list(S=S, SS=SS, z=z, S2=S2, CQ=CQ, CV=CV)
     return(result)
   }else if(p > c & c > s){
     Co <- c -s
@@ -111,8 +111,8 @@ Newsvendor <- function(mu,sigma, Co=0, Cu=0, p=0,c=0,s=0){
     SS <- z * sigma
     EC <- c1 * sigma * stats::dnorm(z)
     EP <- c2 * mu-EC
-    options(digits=3)
-    result <- c(S=S, SS=SS, z=z, S2=S2,  CQ=CQ, CV=CV, EC=EC, EP=EP)
+    #options(digits=3)
+    result <- list(S=S, SS=SS, z=z, S2=S2,  CQ=CQ, CV=CV, EC=EC, EP=EP)
     return(result)
   }else {
     return(NaN)
