@@ -22,7 +22,7 @@ Newsvendor(mu, sigma, Co = 0, Cu = 0, p = 0, c = 0, s = 0)
 \item{{s}}{{salvage price}}
 }
 \value{
-A vector containing the following:
+A list containing the following:
 \itemize{
 \item{S}  {the optimal order quantity}
 \item{SS}  {the safety stock}
